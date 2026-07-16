@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios | Ofimática Pro</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo-contenedor">
+            <img src="../images/logo.png" alt="Logo Ofimática Pro" class="logo-img">
+            <h1>Ofimática Pro</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../index.html#nosotros">Nosotros</a></li>
+                <li><a href="../pages/servicios.html">Servicios</a></li>
+                <li><a href="../index.html#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Nuestros Servicios de Capacitación</h2>
+            <p>Diseñados para llevarte desde cero hasta un nivel competitivo y autónomo.</p>
+
+            <div id="servicios">
+                <article>
+                    <h3>1. Clases Particulares de Microsoft Excel</h3>
+                    <img src="../images/excel.webp" alt="Gráficos y hojas de cálculo" width="300">
+                    <p>Aprende desde la gestión de celdas básicas hasta tablas dinámicas, funciones lógicas ($VLOOKUP$,
+                        $IF$) y automatización de reportes.</p>
+                    <button onclick="abrirModal('modal-excel')"
+                        style="padding: 10px 20px; font-weight: bold; cursor: pointer;">
+                        Ver Temario Completo
+                    </button>
+                    <p><strong>Inversión:</strong> S/. 45 por hora.</p>
+                </article>
+
+                <article>
+                    <h3>2. Redacción Efectiva en Microsoft Word</h3>
+                    <img src="../images/word.webp" alt="Documento de texto formal" width="300">
+                    <p>Domina la creación de documentos académicos y profesionales, formatos APA, tablas de contenido
+                        automáticas y correspondencia masiva.</p>
+                    <button onclick="abrirModal('modal-word')"
+                        style="padding: 10px 20px; font-weight: bold; cursor: pointer;">
+                        Ver Temario Completo
+                    </button>
+                    <p><strong>Inversión:</strong> S/. 35 por hora.</p>
+                </article>
+
+                <article>
+                    <h3>3. Presentaciones de Impacto en PowerPoint</h3>
+                    <img src="../images/powerpoint.webp" alt="Presentación de diapositivas en pantalla" width="300">
+                    <p>Diseña diapositivas interactivas y profesionales. Manejo de transiciones, animaciones lógicas,
+                        inserción de multimedia y estructuras discursivas.</p>
+                    <button onclick="abrirModal('modal-ppt')"
+                        style="padding: 10px 20px; font-weight: bold; cursor: pointer;">
+                        Ver Temario Completo
+                    </button>
+                    <p><strong>Inversión:</strong> S/. 35 por hora.</p>
+                </article>
+
+                <article>
+                    <h3>4. Gestión de datos con PowerBI</h3>
+                    <img src="../images/powerbi.webp" alt="Gráficos y visualización de datos" width="300">
+                    <p>Conviértete en un experto en el análisis de datos con Power BI. Aprende a crear informes
+                        interactivos,
+                        visualizaciones atractivas y cuadros de mando que permitan una toma de decisiones basada en
+                        datos.
+                    </p>
+                    <button onclick="abrirModal('modal-powerbi')"
+                        style="padding: 10px 20px; font-weight: bold; cursor: pointer;">
+                        Ver Temario Completo
+                    </button>
+                    <p><strong>Inversión:</strong> S/. 50 por hora.</p>
+                </article>
+
+                <article>
+                    <h3>5. Prompts con IA</h3>
+                    <img src="../images/ia.webp" alt="Persona mayor usando feliz una computadora" width="300">
+                    <p>Aprende a usar la inteligencia artificial para potenciar tu creatividad y productividad. Domina
+                        la
+                        creación de prompts efectivos para generar texto, imágenes, música y más.</p>
+                    <button onclick="abrirModal('modal-ia')"
+                        style="padding: 10px 20px; font-weight: bold; cursor: pointer;">
+                        Ver Temario Completo
+                    </button>
+                    <p><strong>Inversión:</strong> S/. 50 por hora.</p>
+                </article>
+            </div>
+
+            <div id="modal-excel" class="modal-overlay">
+                <div class="modal-content">
+                    <span class="modal-cerrar" onclick="cerrarModal('modal-excel')">&times;</span>
+                    <h2>Curso Especializado: Microsoft Excel</h2>
+                    <h3>Plan de Estudios Detallado:</h3>
+                    <ul>
+                        <li><strong>Módulo 1:</strong> Interfaz, fórmulas aritméticas básicas y formato condicional.
+                        </li>
+                        <li><strong>Módulo 2:</strong> Funciones lógicas esenciales ($IF$, $VLOOKUP$, $XLOOKUP$).</li>
+                        <li><strong>Módulo 3:</strong> Construcción y segmentación de Tablas Dinámicas.</li>
+                        <li><strong>Módulo 4:</strong> Introducción a Macros y Dashboards interactivos.</li>
+                    </ul>
+                    <p><strong>Duración recomendada:</strong> 12 horas académicas.</p>
+                    <p><strong>Incluye:</strong> Plantillas de práctica automatizadas y soporte de consultas posclase.
+                    </p>
+                </div>
+            </div>
+
+            <div id="modal-word" class="modal-overlay">
+                <div class="modal-content">
+                    <span class="modal-cerrar" onclick="cerrarModal('modal-word')">&times;</span>
+                    <h2>Curso Especializado: Redacción en Word</h2>
+                    <h3>Plan de Estudios Detallado:</h3>
+                    <ul>
+                        <li><strong>Módulo 1:</strong> Configuración de páginas, estilos de títulos y saltos de sección.
+                        </li>
+                        <li><strong>Módulo 2:</strong> Automatización de índices (tablas de contenido) e ilustraciones.
+                        </li>
+                        <li><strong>Módulo 3:</strong> Gestión de citas y bibliografía bajo Normas APA vigentes.</li>
+                        <li><strong>Módulo 4:</strong> Correspondencia masiva y protección de documentos.</li>
+                    </ul>
+                    <p><strong>Duración recomendada:</strong> 8 horas académicas.</p>
+                    <p><strong>Incluye:</strong> Plantilla preconfigurada lista para tesis o informes corporativos.</p>
+                </div>
+            </div>
+
+            <div id="modal-ppt" class="modal-overlay">
+                <div class="modal-content">
+                    <span class="modal-cerrar" onclick="cerrarModal('modal-ppt')">&times;</span>
+                    <h2>Curso Especializado: PowerPoint de Impacto</h2>
+                    <h3>Plan de Estudios Detallado:</h3>
+                    <ul>
+                        <li><strong>Módulo 1:</strong> Teoría del diseño visual, paletas de colores y fuentes legibles.
+                        </li>
+                        <li><strong>Módulo 2:</strong> Uso avanzado de patrones de diapositivas para ahorrar tiempo.
+                        </li>
+                        <li><strong>Módulo 3:</strong> Animaciones lógicas y la potente transición "Transformación"
+                            (Morph).</li>
+                        <li><strong>Módulo 4:</strong> Inserción de multimedia interactiva y exportación a video de alta
+                            definición.</li>
+                    </ul>
+                    <p><strong>Duración recomendada:</strong> 6 horas académicas.</p>
+                    <p><strong>Incluye:</strong> Catálogo privado con más de 100 iconos y vectores de recursos.</p>
+                </div>
+            </div>
+
+            <div id="modal-powerbi" class="modal-overlay">
+                <div class="modal-content">
+                    <span class="modal-cerrar" onclick="cerrarModal('modal-powerbi')">&times;</span>
+                    <h2>Curso Especializado: Power BI</h2>
+                    <h3>Plan de Estudios Detallado:</h3>
+                    <ul>
+                        <li><strong>Módulo 1:</strong> Introducción a Power BI Desktop y la arquitectura de datos.</li>
+                        <li><strong>Módulo 2:</strong> Transformación de datos con Power Query y el lenguaje DAX básico.
+                        </li>
+                        <li><strong>Módulo 3:</strong> Creación de visualizaciones interactivas y storytelling con
+                            datos.</li>
+                        <li><strong>Módulo 4:</strong> Publicación y colaboración en el servicio Power BI y dashboards
+                            interactivos.</li>
+                    </ul>
+                    <p><strong>Duración recomendada:</strong> 16 horas académicas (ritmo flexible).</p>
+                    <p><strong>Incluye:</strong> Guía visual impresa paso a paso en formato digital de lectura sencilla.
+                    </p>
+                </div>
+            </div>
+
+            <div id="modal-ia" class="modal-overlay">
+                <div class="modal-content">
+                    <span class="modal-cerrar" onclick="cerrarModal('modal-ia')">&times;</span>
+                    <h2>Curso Especializado: Prompts con IA</h2>
+                    <h3>Plan de Estudios Detallado:</h3>
+                    <ul>
+                        <li><strong>Módulo 1:</strong> Introducción a la IA generativa y herramientas principales
+                            (ChatGPT,
+                            Claude, Midjourney).</li>
+                        <li><strong>Módulo 2:</strong> Fundamentos del diseño de prompts: claridad, contexto y
+                            restricciones.</li>
+                        <li><strong>Módulo 3:</strong> Técnicas avanzadas: Few-shot prompting, cadenas de pensamiento y
+                            ingeniería de prompts.</li>
+                        <li><strong>Módulo 4:</strong> Aplicaciones prácticas: generación de texto, imágenes, código y
+                            automatización de tareas.</li>
+                    </ul>
+                    <p><strong>Duración recomendada:</strong> 12 horas académicas.</p>
+                    <p><strong>Incluye:</strong> Biblioteca de prompts probados y acceso a una comunidad privada de
+                        usuarios.
+                    </p>
+                </div>
+            </div>
+            <script src="../scripts/scripts.js"></script>
+        </section>
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2026 Ofimática Pro. Todos los derechos reservados.</p>
+        <p><a href="index.html">Volver a la página principal</a></p>
+    </footer>
+
+</body>
+
+</html>

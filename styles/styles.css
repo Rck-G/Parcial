@@ -1,0 +1,487 @@
+/* ==========================================================================
+   1. CONFIGURACIÓN GENERAL Y VARIABLES
+   ========================================================================== */
+:root {
+    --color-principal: #0056b3;
+    --color-secundario: #f1f5f9;
+    --color-oscuro: #1e293b;
+    --color-texto: #334155;
+    --color-exito: #10b981;
+    --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--fuente-principal);
+    line-height: 1.6;
+    color: var(--color-texto);
+    background-color: #ffffff;
+}
+
+/* ==========================================================================
+   2. ENCABEZADO Y NAVEGACIÓN
+   ========================================================================== */
+header {
+    background-color: var(--color-oscuro);
+    color: #ffffff;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+/* Contenedor Flexbox para alinear el logo y el texto a los lados */
+.logo-contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 0.5rem;
+}
+
+/* Control del tamaño y forma del logotipo */
+.logo-img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+/* Modifica el h1 existente para quitarle el margen inferior que tenía antes */
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0;
+}
+
+header p em {
+    color: #94a3b8;
+    font-style: normal;
+    font-size: 1.1rem;
+}
+
+nav {
+    margin-top: 1.5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--color-principal);
+}
+
+/* ==========================================================================
+   3. ESTRUCTURA Y CONTENEDORES CONTENIDO
+   ========================================================================== */
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+section {
+    padding: 2.5rem 0;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #e2e8f0;
+    margin: 1rem 0;
+}
+
+h2 {
+    color: var(--color-oscuro);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--color-principal);
+    margin-top: 0.5rem;
+}
+
+h3 {
+    color: var(--color-principal);
+    margin: 1.5rem 0 0.5rem 0;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* Estilo especial para la sección Inicio */
+#inicio {
+    text-align: center;
+}
+
+#inicio img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+blockquote {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #64748b;
+    padding: 1rem;
+    border-left: 4px solid var(--color-principal);
+    background-color: var(--color-secundario);
+    margin: 1.5rem 0;
+}
+
+/* Listas estilizadas */
+ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* ==========================================================================
+   4. SECCIÓN DE PRODUCTOS / SERVICIOS
+   ========================================================================== */
+
+
+/* Contenedor padre de los artículos */
+#servicios {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+/* Tarjeta individual de cada servicio */
+article {
+    background-color: var(--color-secundario);
+    padding: 2rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto visual al pasar el mouse por encima de la tarjeta */
+article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+article img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin: 1.5rem 0;
+}
+
+article strong {
+    color: var(--color-oscuro);
+    font-size: 1.2rem;
+    display: block;
+    margin-top: auto;
+    padding-top: 1rem;
+}
+
+/* ==========================================================================
+   CAMBIO A 2 COLUMNAS (Pantallas medianas y grandes)
+   ========================================================================== */
+@media (min-width: 768px) {
+    #servicios {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ==========================================================================
+   5. FORMULARIOS Y ELEMENTOS DE CONTACTO
+   ========================================================================== */
+form {
+    background-color: var(--color-secundario);
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 2rem auto 0 auto;
+}
+
+form p {
+    margin-bottom: 1.2rem;
+}
+
+label {
+    font-weight: 600;
+    color: var(--color-oscuro);
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+    margin-top: 0.25rem;
+    transition: border-color 0.3s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--color-principal);
+    box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.15);
+}
+
+button[type="submit"] {
+    background-color: var(--color-principal);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #004085;
+}
+
+/* ==========================================================================
+   6. PIE DE PÁGINA (FOOTER)
+   ========================================================================== */
+footer {
+    background-color: var(--color-oscuro);
+    color: #94a3b8;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 4rem;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* ==========================================================================
+   7. ESTILOS ADICIONALES PARA LA PÁGINA DE INDEX COMPLETA
+   ========================================================================== */
+
+/* Bloque de Métricas/Estadísticas */
+.metricas-contenedor {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: var(--color-principal);
+    color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    gap: 1.5rem;
+}
+
+.metrica-item h3 {
+    color: #ffffff;
+    font-size: 2.2rem;
+    margin: 0;
+}
+
+.metrica-item p {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #cbd5e1;
+}
+
+/* Sección de Testimonios */
+.testimonios-contenedor {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.testimonio-card {
+    background-color: var(--color-secundario);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 5px solid var(--color-principal);
+}
+
+.testimonio-card .comentario {
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+.testimonio-card .autor {
+    text-align: right;
+    color: var(--color-oscuro);
+}
+
+/* Sección de Preguntas Frecuentes (FAQ) */
+.faq-item {
+    margin-bottom: 1.5rem;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    padding: 1.2rem;
+    border-radius: 6px;
+}
+
+.faq-item h3 {
+    margin-top: 0;
+    font-size: 1.2rem;
+}
+
+/* Diseño Responsive en Computadora para los testimonios */
+@media (min-width: 768px) {
+    .testimonios-contenedor {
+        flex-direction: row;
+        /* Pone los testimonios uno al lado del otro */
+    }
+
+    .testimonio-card {
+        flex: 1;
+        /* Distribuye el ancho equitativamente */
+    }
+}
+
+
+/* ==========================================================================
+   8. ESTILOS DE LAS VENTANAS EMERGENTES (MODALES)
+   ========================================================================== */
+
+/* Botón que activa la ventana */
+.btn-modal {
+    background-color: var(--color-principal);
+    color: #ffffff;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 1rem 0;
+    transition: background-color 0.2s ease;
+}
+
+.btn-modal:hover {
+    background-color: var(--color-oscuro);
+}
+
+/* Fondo oscuro translúcido que cubre toda la pantalla */
+.modal-overlay {
+    display: none;
+    /* Oculto por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 23, 42, 0.6);
+    /* Color oscuro con opacidad */
+    z-index: 1000;
+    /* Asegura que se sitúe por encima de todo */
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+/* Caja blanca central que contiene la información */
+.modal-content {
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 8px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
+    position: relative;
+    animation: aparecerModal 0.3s ease-out;
+}
+
+/* Animación de entrada suave */
+@keyframes aparecerModal {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Botón 'X' para cerrar la ventana */
+.modal-cerrar {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2rem;
+    color: #94a3b8;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.modal-cerrar:hover {
+    color: #000000;
+}
+
+/* Detalles internos de los elementos del modal */
+.modal-content h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.modal-content h2::after {
+    width: 40px;
+    /* Línea decorativa más pequeña */
+}
+
+.modal-content h3 {
+    margin-top: 1rem;
+    color: var(--color-texto);
+}
+
+.modal-content ul {
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+}
